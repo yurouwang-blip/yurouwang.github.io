@@ -7,6 +7,38 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const publications = document.querySelectorAll(".publication-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+      if (filter === "clear" || filter === "all") {
+        document.querySelector('[data-filter="all"]').classList.add("active");
+      } else {
+        button.classList.add("active");
+      }
+
+      publications.forEach((pub) => {
+        const type = pub.dataset.type || "";
+        const year = pub.dataset.year || "";
+
+        const shouldShow =
+          filter === "all" ||
+          filter === "clear" ||
+          type.split(" ").includes(filter) ||
+          year === filter;
+
+        pub.classList.toggle("hidden", !shouldShow);
+      });
+    });
+  });
+</script>
+
 <body>
   <header class="site-header">
     <nav>
