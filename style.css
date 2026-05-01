@@ -212,6 +212,10 @@ footer {
   font-weight: 500;
 }
 
+.affiliation-item + .affiliation-item {
+  margin-top: 10px;
+}
+
 .affiliation-item svg {
   color: #2f6f5e;
   flex-shrink: 0;
