@@ -220,3 +220,204 @@ footer {
   color: #2f6f5e;
   flex-shrink: 0;
 }
+
+
+.publications-section {
+  max-width: 1100px;
+}
+
+.publications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.publications-header h2 {
+  margin-bottom: 4px;
+}
+
+.publication-note {
+  margin: 0;
+  color: #526174;
+  font-size: 14px;
+}
+
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  max-width: 620px;
+}
+
+.filter-btn {
+  border: 1px solid #111827;
+  background: transparent;
+  color: #1f2937;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #111827;
+  color: #ffffff;
+}
+
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.publication-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-left: 18px;
+  border-left: 2px solid #111827;
+}
+
+.publication-main {
+  flex: 1;
+}
+
+.publication-item h3 {
+  margin: 0 0 6px;
+  font-size: 21px;
+  line-height: 1.35;
+  color: #0f172a;
+}
+
+.pub-number {
+  color: #475569;
+  margin-right: 6px;
+}
+
+.title-link {
+  color: #0f172a;
+  font-size: 16px;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+.title-link:hover {
+  text-decoration: underline;
+}
+
+.authors {
+  margin: 0 0 8px;
+  color: #334155;
+  font-size: 16px;
+}
+
+.authors strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.badge.preprint {
+  background: #ef4444;
+}
+
+.badge.submitted {
+  background: #64748b;
+}
+
+.badge.revision {
+  background: #f59e0b;
+}
+
+.topic {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 5px;
+  color: #334155;
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.year {
+  color: #475569;
+}
+
+.publication-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.publication-links a {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.publication-links a::before {
+  content: "▧ ";
+}
+
+.publication-links a:hover {
+  color: #111827;
+  text-decoration: underline;
+}
+
+.publication-item.hidden {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .publications-header {
+    flex-direction: column;
+  }
+
+  .publication-filters {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+
+  .publication-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .publication-links {
+    align-self: flex-start;
+  }
+
+  .publication-item h3 {
+    font-size: 19px;
+  }
+}
