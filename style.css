@@ -421,3 +421,24 @@ footer {
     font-size: 19px;
   }
 }
+
+
+.publication-note {
+  margin: 4px 0 0;
+  color: #334155;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pub-symbol {
+  font-weight: 700;
+  color: #334155;
+}
+
+.author-marker {
+  font-size: 0.75em;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #334155;
+  font-weight: 700;
+}
